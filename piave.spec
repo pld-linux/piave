@@ -6,7 +6,7 @@ Summary:	Multimedia render and effect engine
 Summary(pl):	Silnik wy¶wietlania i robienia efektów multimedialnych
 Name:		piave
 Version:	0.2.4
-Release:	1
+Release:	1.1
 Epoch:		1
 License:	GPL
 Group:		Applications/Multimedia
