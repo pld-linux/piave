@@ -1,0 +1,29 @@
+--- piave-0.2.4/m4/as-arts.m4.orig	Mon Sep 15 12:40:40 2003
++++ piave-0.2.4/m4/as-arts.m4	Thu May  6 13:33:21 2004
+@@ -49,8 +49,8 @@
+     no_arts=yes
+   else
+     # FIXME : thomas added this sed to get arts path instead of artsc
+-    ARTS_CXXFLAGS=`$ARTS_CONFIG $artsconf_args --cflags | sed 's/artsc$/arts/'`
+-    ARTS_LIBS=`$ARTS_CONFIG $artsconf_args --libs | sed 's/artsc$/arts/'`
++    ARTS_CXXFLAGS=`$ARTS_CONFIG $artsconf_args --cflags | sed 's/artsc\>/arts/'`
++    ARTS_LIBS=`$ARTS_CONFIG $artsconf_args --libs | sed 's/artsc\>/artsflow/'`
+ 
+     arts_major_version=`$ARTS_CONFIG $arts_args --version | \
+            sed 's/\([[0-9]]*\).\([[0-9]]*\).\([[0-9]]*\)/\1/'`
+--- piave-0.2.4/configure.in.orig	Sun Mar  7 12:16:18 2004
++++ piave-0.2.4/configure.in	Thu May  6 13:35:27 2004
+@@ -172,11 +172,9 @@
+   [  --with-ffmpeg=PFX       link ffmpeg  !! experimental !!],
+   [ 
+ 	AC_DEFINE( WITH_FFMPEG, 1, [use ffmpeg to de/encode video] )
+-	FFMPEG_DIR=$withval
+ 	have_ffmpeg=yes
+-	FFMPEG_LIBS="@FFMPEG_DIR@/libavcodec/libavcodec.a @FFMPEG_DIR@/libav/libavformat.a"
+-	FFMPEG_CXXFLAGS="-I@FFMPEG_DIR@/libavcodec -I@FFMPEG_DIR@/libav"
+-	AC_SUBST(FFMPEG_DIR)
++	FFMPEG_LIBS="-lavcodec -lavformat"
++	FFMPEG_CXXFLAGS="-I/usr/include/ffmpeg"
+ 	AC_SUBST(FFMPEG_LIBS)
+ 	AC_SUBST(FFMPEG_CXXFLAGS)
+ 	AC_MSG_RESULT([using ffmpeg in $FFMPEG_DIR])
