@@ -1,12 +1,12 @@
 # TODO:
 #   - Spread libraries among devel and main package (or even -static)
-#   - Consider dividing per plugins packege.
+#   - Consider dividing into plugins packages.
 
 Summary:	Multimedia render and effect engine
 Summary(pl):	Silnik wy¶wietlania i robienia efektów multimedialnych
 Name:		piave
 Version:	0.2.4
-Release:	0.1
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		Applications/Multimedia
@@ -65,8 +65,8 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/%{name}/plugins
 %dir %{_libdir}/%{name}/plugins/effects
 %dir %{_libdir}/%{name}/plugins/iostream
-%dir %{_libdir}/lib%{name}.*
-%dir %{_libdir}/%{name}/*/*/lib*
+%{_libdir}/lib%{name}.*
+%{_libdir}/%{name}/*/*/lib*
 
 %files devel
 %defattr(644,root,root,755)
