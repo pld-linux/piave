@@ -14,6 +14,7 @@ Source0:	http://dl.sourceforge.net/modesto/%{name}-%{version}.tar.gz
 # Source0-md5:	fdf6e94f9fdaae5547e641109e50e7b1
 URL:		http://sourceforge.net/projects/modesto/
 BuildRequires:	SDL-devel
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,6 +45,7 @@ piave.
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.* .
 %configure
 %{__make}
 
@@ -51,7 +53,7 @@ piave.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-    DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name}
 
