@@ -28,6 +28,7 @@ BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	libvorbis-devel >= 1:1.0
 BuildRequires:	libxml2-devel >= 2.0.0
+BuildRequires:	linux-libc-headers >= 7:2.6.12.0-7
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -88,6 +89,7 @@ Statyczna biblioteka piave.
 %prep
 %setup -q
 %patch0 -p1
+sed -i -e 's#libdv/dv1394.h#linux/ieee1394/dv1394.h#g' ./libpiave/avccontroller.hh ./libpiave/IEEE1394IO.hh
 
 %build
 %{__libtoolize}
