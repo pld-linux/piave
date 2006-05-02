@@ -10,7 +10,7 @@ Group:		Applications/Multimedia
 Source0:	http://dl.sourceforge.net/modesto/%{name}-%{version}.tar.gz
 # Source0-md5:	fdf6e94f9fdaae5547e641109e50e7b1
 Patch0:		%{name}-configure.patch
-URL:		http://sourceforge.net/projects/modesto/
+URL:		http://modesto.sourceforge.net/piave/
 BuildRequires:	SDL-devel >= 1.1.8
 BuildRequires:	SDL_image-devel
 BuildRequires:	alsa-lib-devel >= 0.9.0
