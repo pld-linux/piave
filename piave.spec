@@ -1,6 +1,6 @@
 # TODO: consider separating more plugins into subpackages
 Summary:	Multimedia render and effect engine
-Summary(pl):	Silnik wy秝ietlania i robienia efekt體 multimedialnych
+Summary(pl.UTF-8):   Silnik wy艣wietlania i robienia efekt贸w multimedialnych
 Name:		piave
 Version:	0.2.4
 Release:	4
@@ -37,27 +37,27 @@ PIAVE is render and effect engine for Modesto project. Modesto is a
 professional non-linear video-, audio- and midi editor for GNU/Linux
 written in C++ with the TOAD GUI Library.
 
-%description -l pl
-PIAVE jest silnikiem wy秝ietlania i robienia efekt體 dla projeku
+%description -l pl.UTF-8
+PIAVE jest silnikiem wy艣wietlania i robienia efekt贸w dla projeku
 Modesto. Modesto jest profesjonalnym nieliniowym edytorem wideo, audio
-i midi dla GNU/Linux zakodowanym w C++ przy u縴ciu biblioteki GUI
+i midi dla GNU/Linux zakodowanym w C++ przy u偶yciu biblioteki GUI
 TOAD.
 
 %package iostream-arts
 Summary:	aRts input/output stream plugin for piave
-Summary(pl):	Wtyczka wej禼ia/wyj禼ia strumieni aRts dla piave
+Summary(pl.UTF-8):   Wtyczka wej艣cia/wyj艣cia strumieni aRts dla piave
 Group:		X11/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description iostream-arts
 aRts input/output stream plugin for piave.
 
-%description iostream-arts -l pl
-Wtyczka wej禼ia/wyj禼ia strumieni aRts dla piave.
+%description iostream-arts -l pl.UTF-8
+Wtyczka wej艣cia/wyj艣cia strumieni aRts dla piave.
 
 %package devel
 Summary:	Header files required to build programs using piave
-Summary(pl):	Pliki nag丑wkowe wymagane przez programy u縴waj眂e piave
+Summary(pl.UTF-8):   Pliki nag艂贸wkowe wymagane przez programy u偶ywaj膮ce piave
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	SDL-devel >= 1.1.8
@@ -70,20 +70,20 @@ Requires:	libxml2-devel >= 2.0.0
 %description devel
 Header files required to build programs using piave.
 
-%description devel -l pl
-Pliki nag丑wkowe niezb阣ne do kompilacji program體 korzystaj眂ych z
+%description devel -l pl.UTF-8
+Pliki nag艂贸wkowe niezb臋dne do kompilacji program贸w korzystaj膮cych z
 piave.
 
 %package static
 Summary:	Static piave library
-Summary(pl):	Statyczna biblioteka piave
+Summary(pl.UTF-8):   Statyczna biblioteka piave
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 Static piave library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka piave.
 
 %prep
