@@ -1,6 +1,6 @@
 # TODO: consider separating more plugins into subpackages
 Summary:	Multimedia render and effect engine
-Summary(pl.UTF-8):   Silnik wyświetlania i robienia efektów multimedialnych
+Summary(pl.UTF-8):	Silnik wyświetlania i robienia efektów multimedialnych
 Name:		piave
 Version:	0.2.4
 Release:	4
@@ -45,7 +45,7 @@ TOAD.
 
 %package iostream-arts
 Summary:	aRts input/output stream plugin for piave
-Summary(pl.UTF-8):   Wtyczka wejścia/wyjścia strumieni aRts dla piave
+Summary(pl.UTF-8):	Wtyczka wejścia/wyjścia strumieni aRts dla piave
 Group:		X11/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
@@ -57,7 +57,7 @@ Wtyczka wejścia/wyjścia strumieni aRts dla piave.
 
 %package devel
 Summary:	Header files required to build programs using piave
-Summary(pl.UTF-8):   Pliki nagłówkowe wymagane przez programy używające piave
+Summary(pl.UTF-8):	Pliki nagłówkowe wymagane przez programy używające piave
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	SDL-devel >= 1.1.8
@@ -76,7 +76,7 @@ piave.
 
 %package static
 Summary:	Static piave library
-Summary(pl.UTF-8):   Statyczna biblioteka piave
+Summary(pl.UTF-8):	Statyczna biblioteka piave
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
