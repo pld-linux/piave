@@ -88,7 +88,7 @@ Statyczna biblioteka piave.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 sed -i -e 's#libdv/dv1394.h#linux/ieee1394/dv1394.h#g' ./libpiave/avccontroller.hh ./libpiave/IEEE1394IO.hh
 
 %build
